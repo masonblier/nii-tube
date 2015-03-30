@@ -73,6 +73,8 @@ App.renderPlaylist = function(){
 
 App.play = function(){
   App.currentVideo = Object.keys(Videos)[App.videoIdx];
+  App.playing = false;
+  App.ended = false;
   if (!App.player) {
     App.player = new YT.Player('player', {
       height: window.innerHeight,
