@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#app {
+  position: absolute;
+  top:0;right:0;bottom:0;left:0;
+}
+
+#player {
+  display: block;
+}
+
+#comments-block {
+  position: absolute;
+  top: 32px;
+  bottom: 35px;
+  left: 0; right: 0;
+  overflow: hidden;
+  font-size: 48px;
+  font-family: Arial;
+  font-weight: bold;
+  color: white;
+}
+#comments-overlay {
+  position: absolute;
+  top: 32px;
+  bottom: 35px;
+  left: 0; right: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+@-webkit-keyframes flashcomment {
+  from {
+    transform:translate(120%);
+  }
+  to {
+    transform:translate(-1500px);
+  }
+}
+/*@-moz-keyframes flashcomment {
+  from {
+    transform:translate(120%);
+  }
+  to {
+    transform:translate(-1500px);
+  }
+}*/
+@keyframes flashcomment {
+  from {
+    transform:translate(120%);
+  }
+  to {
+    transform:translate(-1500px);
+  }
+}
+.comment {
+  position: absolute;
+  top: 200px;
+  width: 1500px;
+  -webkit-animation-name: flashcomment;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: black;
+/*  -moz-animation-name: flashcomment;*/
+/*  -moz-animation-duration: 3s;*/
+/*  -moz-animation-timing-function: linear;*/
+/*  -moz-text-stroke-width: 4px;*/
+/*  -moz-text-stroke-color: black;*/
+  animation-name: flashcomment;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  text-stroke-width: 4px;
+  text-stroke-color: black;
+}
+
+#playlist {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  width: 250px;
+  background: rgba(0,0,0,0.8);
+  border-radius: 12px;
+  padding: 12px;
+}
+#playlist>h1 {
+  color: white;
+  margin: 0 0 7px 0;
+}
+
+#playlist>.playlist-controls>a {
+  display: block;
+  padding: 7px;
+  color: #1bc2c8;
+  border-top: 1px solid black;
+}
+#playlist>.playlist-controls>a:hover {
+  color: #2bd2d8;
+}
+#playlist>.playlist-controls>a:first-child {
+  float: right;
+}
+
+#playlist>.playlist-videos>a {
+  display: block;
+  padding: 7px;
+  color: #38ff82;
+  border-top: 1px solid black;
+}
+#playlist>.playlist-videos>a:hover {
+  color: #48ffa2;
+}
